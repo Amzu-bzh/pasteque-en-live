@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjught036e550"]
+
+[ext_resource type="Texture2D" uid="uid://by3x5qm3u0yv3" path="res://assets/fruits2.png" id="1_f0cpg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mlib4"]
+atlas = ExtResource("1_f0cpg")
+region = Rect2(1344, 0, 192, 0)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uny7t"]
+radius = 71.0211
+
+[node name="Watermelon" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_mlib4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_uny7t")

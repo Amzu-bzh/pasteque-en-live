@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://cu2axt6isdh6a"]
+
+[ext_resource type="Texture2D" uid="uid://by3x5qm3u0yv3" path="res://assets/fruits2.png" id="1_76aod"]
+[ext_resource type="Script" path="res://scripts/apple.gd" id="1_glsqa"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qkw1h"]
+atlas = ExtResource("1_76aod")
+region = Rect2(960, 0, 192, 0)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k708g"]
+radius = 37.0135
+
+[node name="Apple" type="RigidBody2D"]
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("1_glsqa")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_qkw1h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_k708g")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

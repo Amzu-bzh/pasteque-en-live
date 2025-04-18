@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5e2pkeygvp26"]
+
+[ext_resource type="Texture2D" uid="uid://by3x5qm3u0yv3" path="res://assets/fruits2.png" id="1_h2bp0"]
+[ext_resource type="Script" path="res://scripts/orange.gd" id="1_lec1v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_csd4b"]
+atlas = ExtResource("1_h2bp0")
+region = Rect2(768, 0, 192, 0)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3maug"]
+radius = 39.0
+
+[node name="Orange" type="RigidBody2D"]
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("1_lec1v")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_csd4b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_3maug")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

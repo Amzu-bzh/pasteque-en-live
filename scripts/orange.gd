@@ -11,7 +11,7 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_body_entered(body: Node):
-	if body.name == "Cherry":
+	if body.name == "Orange":
 		body.queue_free()
 		var fruit = StrawberryScene.instantiate()
 		fruit.position = self.position

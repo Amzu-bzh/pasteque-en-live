@@ -11,6 +11,8 @@ region = Rect2(0, 0, 192, 0)
 radius = 24.3311
 
 [node name="Cherry" type="RigidBody2D"]
+contact_monitor = true
+max_contacts_reported = 1
 script = ExtResource("1_4qe3i")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -18,3 +20,5 @@ texture = SubResource("AtlasTexture_ygip2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_4yker")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

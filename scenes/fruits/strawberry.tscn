@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://qx25fsgqwvy5"]
+
+[ext_resource type="Script" path="res://scripts/strawberry.gd" id="1_7arb5"]
+[ext_resource type="Texture2D" uid="uid://by3x5qm3u0yv3" path="res://assets/fruits2.png" id="1_s4f30"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kt6dj"]
+atlas = ExtResource("1_s4f30")
+region = Rect2(192, 0, 192, 0)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ev86g"]
+radius = 24.3311
+
+[node name="Strawberry" type="RigidBody2D"]
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("1_7arb5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_kt6dj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ev86g")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

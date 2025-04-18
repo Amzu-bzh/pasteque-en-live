@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://b35ctv7oattp"]
+
+[ext_resource type="Texture2D" uid="uid://by3x5qm3u0yv3" path="res://assets/fruits2.png" id="1_m6mbr"]
+[ext_resource type="Script" path="res://scenes/fruits/grapes.gd" id="1_wkecb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eaodu"]
+atlas = ExtResource("1_m6mbr")
+region = Rect2(384, 0, 192, 0)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tahru"]
+radius = 31.1448
+
+[node name="Grapes" type="RigidBody2D"]
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("1_wkecb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_eaodu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_tahru")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
