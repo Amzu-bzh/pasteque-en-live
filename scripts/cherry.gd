@@ -1,10 +1,4 @@
 extends RigidBody2D
-class_name fruit
-
-var fruit_type: int
-
-func _init(fruit_type: int):
-	fruit_type = fruit_type
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

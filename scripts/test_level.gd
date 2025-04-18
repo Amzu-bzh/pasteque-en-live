@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var FruitScene = preload("res://scenes/fruits/fruit.tscn") # Remplace par le bon chemin !
+@onready var FruitScene = preload("res://scenes/fruits/cherry.tscn") # Remplace par le bon chemin !
 
 func _input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:

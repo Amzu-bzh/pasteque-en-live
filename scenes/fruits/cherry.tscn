@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://b46whowg4vmpr"]
+
+[ext_resource type="Script" path="res://scripts/cherry.gd" id="1_4qe3i"]
+[ext_resource type="Texture2D" uid="uid://by3x5qm3u0yv3" path="res://assets/fruits2.png" id="1_fyc6l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ygip2"]
+atlas = ExtResource("1_fyc6l")
+region = Rect2(0, 0, 192, 0)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4yker"]
+radius = 24.3311
+
+[node name="Cherry" type="RigidBody2D"]
+script = ExtResource("1_4qe3i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_ygip2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_4yker")
