@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://2yryew8i0lk0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5jb2w"]
+resource_name = "res://assets/fruits.png"
+
+[node name="cherry" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_5jb2w")
