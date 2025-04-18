@@ -4,13 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://by3x5qm3u0yv3" path="res://assets/fruits2.png" id="2_xwu7v"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ou6wv"]
-radius = 50.0
+radius = 24.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b5kpn"]
 atlas = ExtResource("2_xwu7v")
 region = Rect2(0, 0, 192, 0)
 
 [node name="Fruit" type="RigidBody2D"]
+mass = 1000.0
 script = ExtResource("1_2ts2a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

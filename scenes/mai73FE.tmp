@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1fsuk3g553ie"]
+
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_daxpo"]
+[ext_resource type="Script" path="res://scripts/FruitManager.gd" id="2_kgob7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_enkcy"]
+size = Vector2(700, 20)
+
+[node name="Main_tscn" type="Node2D"]
+script = ExtResource("1_daxpo")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(578, 530)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_enkcy")
+
+[node name="FruitManager" type="Node" parent="."]
+script = ExtResource("2_kgob7")
