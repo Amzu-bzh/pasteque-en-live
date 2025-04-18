@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cphbsdjya54de"]
+
+[ext_resource type="PackedScene" uid="uid://1afb7c0nrt3s" path="res://scenes/container.tscn" id="2_m8ex5"]
+[ext_resource type="PackedScene" uid="uid://b5g88ucoq0kbl" path="res://scenes/fruits/fruit.tscn" id="3_e72kb"]
+
+[node name="TestLevel" type="Node2D"]
+
+[node name="StaticBody2D" parent="." instance=ExtResource("2_m8ex5")]
+position = Vector2(504, 272)
+rotation = 0.633555
+
+[node name="RigidBody2D" parent="." instance=ExtResource("3_e72kb")]
+position = Vector2(343, -48)

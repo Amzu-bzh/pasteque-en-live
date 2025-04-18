@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cphbsdjya54de"]
+
+[ext_resource type="PackedScene" uid="uid://b5g88ucoq0kbl" path="res://scenes/fruits/fruit.tscn" id="1_usm52"]
+[ext_resource type="PackedScene" uid="uid://1afb7c0nrt3s" path="res://scenes/container.tscn" id="2_m8ex5"]
+[ext_resource type="PackedScene" uid="uid://dlj83dt1uo4yh" path="res://scenes/rigid_body_2d.tscn" id="3_e72kb"]
+
+[node name="TestLevel" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_usm52")]
+position = Vector2(300, 0)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("1_usm52")]
+position = Vector2(600, 0)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("2_m8ex5")]
+position = Vector2(585, 280)
+rotation = 0.253073
+
+[node name="RigidBody2D" parent="." instance=ExtResource("3_e72kb")]
+position = Vector2(767, -3)
